@@ -3,7 +3,6 @@ Main file for BB84
 """
 
 from IBMQuantumExperience import IBMQuantumExperience
-import typing
 
 
 def main():
