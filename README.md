@@ -1,6 +1,6 @@
 # CPSC-530-Project-Code
 
-Allows transmitting a bitstring using the BB84 algorithm inside a quantum computer. Designed for the 5 qubit "ibmqx4" quantum computer.
+Allows transmitting a bitstring using the BB84 algorithm inside a quantum computer. Designed for the 5 qubit "ibmqx4" quantum computer. In the Python code, a message is transmitted through the quantum computer one bit at a time, with 1024 "shots" being used the calculate the probabilities of success and failure.
 
 ## Running the Code
 
