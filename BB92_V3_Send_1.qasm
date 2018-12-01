@@ -8,9 +8,16 @@ creg c[5];
 //q[3] = Unused
 //q[4] =  Alice's input register
 
+//c[1] = Bob's basis register
+//c[4] = Output register
+
+
 // Alice Section
 
-// Apply H to the input bit to send a one
+// Apply X to the input bit to send a one
+x q[4];
+
+// Encode the one using an H gate
 h q[4];
 
 // Channel section
@@ -54,6 +61,5 @@ x q[0];
 //Measure result
 measure q[0] -> c[4];
 
-//Measure bases
-measure q[3] -> c[0];
+//Measure Bob's basis
 measure q[1] -> c[1];
