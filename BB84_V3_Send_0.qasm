@@ -8,12 +8,18 @@ creg c[5];
 //q[3] = Alice's random bit register
 //q[4] =  Alice's input register
 
-// Alice Section:
+//c[0] = Alice's basis register
+//c[1] = Bob's basis register
+//c[4] = Output register
+
+
+
+// Alice Section
 
 //Generate a random bit for Alice
 h q[3];
 
-// Controlled Hadamard q[3] -> q[4]
+//Controlled Hadamard q[3] -> q[4]
 s q[3];
 h q[4];
 sdg q[4];
@@ -28,7 +34,7 @@ x q[4];
 
 // Channel section
 
-// Alice pushes qubit to channel
+//Alice pushes qubit to channel
 // X basis
 cx q[4],q[2];
 // Z basis
@@ -38,20 +44,22 @@ cx q[4],q[2];
 h q[2];
 h q[4];
 
-// Bob pulls qubit from channel
-// X basis
+//Bob pulls qubit from channel
+//X basis
 cx q[2],q[0];
-// Z basis
+//Z basis
 h q[2];
 h q[0];
 cx q[2],q[0];
 h q[0];
 h q[2];
 
-// Generate random bit for Bob
+// Bob Section
+
+//Generate random bit for Bob
 h q[1];
 
-// Controlled Hadamard q[1] -> q[0]
+//Controlled Hadamard q[1] -> q[0]
 s q[1];
 h q[0];
 sdg q[0];
@@ -63,6 +71,8 @@ t q[0];
 h q[0];
 s q[0];
 x q[0];
+
+// Measurement Section
 
 //Measure result
 measure q[0] -> c[4];
