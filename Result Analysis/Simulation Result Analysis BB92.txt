@@ -1,0 +1,21 @@
+BB92 Send 0:
+	Success: 264
+	Corruption: 0
+	Invalid: 506 + 254 = 760
+	
+------------------------------------------------------------
+BB92 Send 1:
+	Success: 269
+	Corruption: 0
+	Invalid: 240 + 515 = 755
+	
+------------------------------------------------------------------------	
+	
+BB92 Total:
+	Success: 264 + 269 = 533
+	Corruption: 0
+	Invalid: 760 + 755 = 1515
+	
+	Success prob = 533/2048 = 26.0%
+	Corruption prob = 0/2048 = 0%
+	Invalid prob = 1515/2048 = 74.0%
