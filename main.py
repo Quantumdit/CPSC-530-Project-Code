@@ -54,8 +54,13 @@ def BB84(bitstring, use_real_quantum_computer = False, num_shots = 1024):
         backend = "ibmqx4"
     
     #Set up API
-    token = ***REMOVED***
+    token = ""
     api = IBMQuantumExperience(token)
+    
+    #Confirm that token has been set up
+    if (token == "")
+        print("API token has not been set up. Please enter it into the code in main.py")
+        return
     
     #Confirm enough credits remain if using a quantum computer
     if (backend != "simulator"):
